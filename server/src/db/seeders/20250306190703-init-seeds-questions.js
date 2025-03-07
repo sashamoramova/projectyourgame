@@ -11,13 +11,13 @@ module.exports = {
           body: 'сначала пнуть кота, потом погладить...',
           rightAnswer: 'пропса',
           themeId: 1,
-          cost: 150,
+          cost: 100,
         },
         {
           body: 'известная личность в БД',
           rightAnswer: 'Ади',
           themeId: 1,
-          cost: 100,
+          cost: 150,
         },
         {
           body: 'хранители - душный гусь и дряблый...',
