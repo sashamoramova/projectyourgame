@@ -30,7 +30,8 @@ export const getAllThemesThunk = createAsyncThunk<
   }
 });
 
-export const getAllThemeByIdThunk = createAsyncThunk<
+export const getThemeByIdThunk = createAsyncThunk<
+
   IServerResponse,
   number,
   { rejectValue: IServerResponse }
@@ -42,7 +43,7 @@ export const getAllThemeByIdThunk = createAsyncThunk<
         THEME_API_ENDPOINTS.GET_THEME_BY_ID.replace(":id", String(id))
       );
       const data = response.data;
-    
+
       return data;
     } catch (error) {
       const err = error as AxiosError<IServerResponse>;
