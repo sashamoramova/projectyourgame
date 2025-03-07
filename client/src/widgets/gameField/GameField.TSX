@@ -4,6 +4,7 @@ import { useAppDispatch } from '@/shared/hooks/reduxHooks';
 import { getAllThemesThunk, ThemeArrayType } from '@/entities/theme';
 import {
   getAllQuestionsByIdThunk,
+  getAllQuestionsThunk,
   IQuestion,
   QuestionArrayType,
 } from '@/entities/question';
@@ -39,6 +40,20 @@ export function GameField() {
         const result = await dispatch(getAllQuestionsByIdThunk(id)).unwrap();
         console.log(result);
         if (result && result.data) {
+          return result.data as QuestionArrayType;
+        } else {
+          console.error('Ошибка при получении тем: данные отсутствуют');
+        }
+      } catch (error) {
+        console.error('Ошибка при получении тем:', error);
+      }
+    };
+
+    const fetchAllQuestions = async () => {
+      try {
+        const result = await dispatch(getAllQuestionsThunk()).unwrap();
+        console.log(result);
+        if (result && result.data) {
           setQuestions(result.data as QuestionArrayType);
         } else {
           console.error('Ошибка при получении тем: данные отсутствуют');
@@ -50,6 +65,7 @@ export function GameField() {
 
     fetchThemes();
     fetchQuestions(1);
+    fetchAllQuestions();
   }, [dispatch]);
 
   function openCard(question: IQuestion | null) {
@@ -63,24 +79,28 @@ export function GameField() {
       <div className={styles.main}>
       <div className={styles.field}>
         {themes?.map((theme) => (
-          <div className={styles.column} key={theme.id}>
-            <div className={styles.row}>
-              <div className={styles.themeCard}>{theme.themeName}</div>
-              {questions?.map((question) => (
-                <div
-                  className={styles.questionsCard}
-                  key={question.cost}
-                  onClick={() => openCard(question)}
-                >
-                  {question.cost}
-                </div>
-              ))}
+          <div className={styles.themeRow} key={theme.id}>
+            {/* Блок с темой */}
+            <div className={styles.themeCard}>{theme.themeName}</div>
+            {/* Блок с вопросами для этой темы */}
+            <div className={styles.questionsRow}>
+              {questions
+                ?.filter((question) => question.themeId === theme.id) // Фильтруем вопросы по теме
+                .map((question) => (
+                  <div
+                    className={styles.questionsCard}
+                    key={question.id}
+                    onClick={() => openCard(question)}
+                  >
+                    {question.cost}
+                  </div>
+                ))}
             </div>
           </div>
         ))}
       </div>
       <div>
-      {renderCard && (
+      {renderCard && selectedQ && (
         <QuestionCard
           selectedQ={selectedQ}
           counter={counter}
