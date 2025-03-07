@@ -1,5 +1,9 @@
 import { JSX } from "react";
 
 export function GamePage(): JSX.Element {
-  return <div>тут счет</div>;
+  return <div>тут игра</div>;
 }
+
+
+
+//путь:     /game
