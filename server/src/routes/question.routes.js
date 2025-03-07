@@ -5,6 +5,6 @@ router
 
   .get("/", QuestionController.getAllQuestions)
 
-  .get("/:id/byTheme", QuestionController.getQuestionsByThemeId);
+  .get("/byTheme/:id", QuestionController.getQuestionsByThemeId);
 
 module.exports = router;

@@ -19,18 +19,12 @@ export const getAllThemesThunk = createAsyncThunk<
   { rejectValue: IServerResponse }
 >(THEME_THUNK_TYPES.GET_ALL_THEMES, async (_, { rejectWithValue }) => {
   try {
-    const {response} = await axiosInstance.get(
+    const { data } = await axiosInstance.get(
       THEME_API_ENDPOINTS.GET_ALL_THEMES
     );
-    const serverResponce: IServerResponse = response {
-        statusCode: response.status,
-        message: "Темы успешно получены",
-        data: response.data,
-      };
-     return serverResponce;
-    }
 
-   catch (error) {
+    return data;
+  } catch (error) {
     const err = error as AxiosError<IServerResponse>;
     return rejectWithValue(err.response!.data);
   }
@@ -45,10 +39,10 @@ export const getAllThemeByIdThunk = createAsyncThunk<
   async (id: number, { rejectWithValue }) => {
     try {
       const response = await axiosInstance.get(
-        `THEME_API_ENDPOINTS.GET_THEME_BY_ID.replace/${id}`,
+        THEME_API_ENDPOINTS.GET_THEME_BY_ID.replace(":id", String(id))
       );
-
       const data = response.data;
+    
       return data;
     } catch (error) {
       const err = error as AxiosError<IServerResponse>;
