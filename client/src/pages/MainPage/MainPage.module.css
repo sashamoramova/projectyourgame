@@ -13,10 +13,12 @@ body {
 }
 
 .buttons {
-  margin-top: 300px;
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
   text-align: center;
   border-radius: 30px;
-  /* position: fixed */
 }
 
 .blobBtn {
