@@ -7,14 +7,21 @@ module.exports = {
       "Themes",
       [
         {
-          themeName: "Животные",
+          themeName: "Кампус",
         },
         {
-          themeName: "Еда",
+          themeName: "Онлайн",
         },
         {
-          themeName: "Транспорт",
+          themeName: "Снова бобры",
         },
+        {
+          themeName: "Опять кайтинг",
+        },
+        {
+          themeName: "Матизы",
+        },
+        
       ],
       {}
     );
