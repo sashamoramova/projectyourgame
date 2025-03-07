@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-import styles from "./Game.module.css";
-import { useAppDispatch } from "@/shared/hooks/reduxHooks";
-import { getAllThemesThunk, ThemeArrayType } from "@/entities/theme";
+import React, { useEffect, useState } from 'react';
+import styles from './Game.module.css';
+import { useAppDispatch } from '@/shared/hooks/reduxHooks';
+import { getAllThemesThunk, ThemeArrayType } from '@/entities/theme';
 import {
   getAllQuestionsByIdThunk,
   IQuestion,
   QuestionArrayType,
-} from "@/entities/question";
-import QuestionCard from "@/entities/question/ui/QuestionCard/QuestionCard";
-
+} from '@/entities/question';
+import QuestionCard from '@/entities/question/ui/QuestionCard/QuestionCard';
 
 export function GameField() {
   const [themes, setThemes] = useState<ThemeArrayType | null>(null);
@@ -28,10 +27,10 @@ export function GameField() {
         if (result && result.data) {
           setThemes(result.data as ThemeArrayType);
         } else {
-          console.error("Ошибка при получении тем: данные отсутствуют");
+          console.error('Ошибка при получении тем: данные отсутствуют');
         }
       } catch (error) {
-        console.error("Ошибка при получении тем:", error);
+        console.error('Ошибка при получении тем:', error);
       }
     };
 
@@ -42,24 +41,16 @@ export function GameField() {
         if (result && result.data) {
           setQuestions(result.data as QuestionArrayType);
         } else {
-          console.error("Ошибка при получении тем: данные отсутствуют");
+          console.error('Ошибка при получении тем: данные отсутствуют');
         }
       } catch (error) {
-        console.error("Ошибка при получении тем:", error);
+        console.error('Ошибка при получении тем:', error);
       }
     };
 
     fetchThemes();
     fetchQuestions(1);
-    fetchQuestions(2);
-    fetchQuestions(3);
-    fetchQuestions(4);
-    fetchQuestions(5);
   }, [dispatch]);
-
-  if (themes === null) {
-    return <div>Загрузка...</div>;
-  }
 
   function openCard(question: IQuestion | null) {
     setSelectedQ(question);
@@ -70,7 +61,7 @@ export function GameField() {
     <>
       <div>Очков набрано:{counter}</div>
       <div className={styles.field}>
-        {themes.map((theme) => (
+        {themes?.map((theme) => (
           <div className={styles.column} key={theme.id}>
             <div className={styles.row}>
               <div className={styles.themeCard}>{theme.themeName}</div>
