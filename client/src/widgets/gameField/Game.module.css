@@ -1,14 +1,52 @@
-table {
-  width: 80%;
-  border-collapse: collapse;
-  margin: 20px auto;
+.field {
+  display: flex;
+  flex-direction: column; /* Расположение колонок друг под другом */
+  width: 80%; /* Занимает 80% ширины родителя */
+  margin: 0 auto; /* Центрирование по горизонтали */
 }
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
+
+.column {
+  display: flex;
+  flex-direction: row; /* Расположение карточек в строке */
+  flex: 1; /* Занимает все доступное пространство по ширине */
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.themeCard {
+  background-color: #3498db; /* Пример: синий цвет темы */
+  color: white;
+  padding: 10px;
+  border: 1px solid #2980b9;
   text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 5px;
+  flex: 1; /* Занимает все доступное пространство по высоте */
 }
-th {
-  background-color: #f2f2f2;
+
+.questionsCard {
+  background-color: #ecf0f1; /* Светло-серый фон */
+  color: #2c3e50; /* Темно-синий текст */
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  text-align: center;
+  font-size: 1em;
+  margin: 5px;
+  flex: 1; /* Одинаковая высота для всех карточек с вопросами */
+  height: 100px; /* Фиксированная высота, чтобы все карточки были одинакового размера */
+  display: flex;
+  align-items: center; /* Выравнивание текста по вертикали */
+  justify-content: center; /* Выравнивание текста по горизонтали */
+  border-radius: 5px;
+}
+
+/* Дополнительные стили для красоты */
+.questionsCard:hover {
+  background-color: #d4e6f1; /* Немного более светлый фон при наведении */
+  cursor: pointer; /* Изменение курсора на руку при наведении */
 }
