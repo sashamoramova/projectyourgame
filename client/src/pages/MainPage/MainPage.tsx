@@ -7,6 +7,9 @@ import { useAppSelector } from "@/shared/hooks/reduxHooks";
 export function MainPage(): JSX.Element {
   const navigate = useNavigate();
   const user = useAppSelector((state) => state.user.user);
+
+
+  // const startNewgame = 
   
   return (
     <div className={styles.btnContainer}>
