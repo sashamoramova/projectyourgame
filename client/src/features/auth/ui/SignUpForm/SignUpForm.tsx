@@ -4,6 +4,7 @@ import UserValidator from '../../validation/UserValidator';
 import { IUserSignUpData, signUpThunk } from '@/entities/user';
 import { CLIENT_ROUTES } from '@/shared/enums/clientRoutes';
 import { useAppDispatch, useAppSelector } from '@/shared/hooks/reduxHooks';
+import styles from './SignUpForm.module.css';
 // import { useAlert } from '@/features/alerts';
 
 const INITIAL_INPUTS_DATA = {
@@ -49,7 +50,9 @@ export default function SignUpForm() {
   const { username, email, password, repeatPassword } = inputs;
 
   return (
-    <form onSubmit={onSubmitHandler}>
+    <div className={styles.formWrapper}>
+    <form onSubmit={onSubmitHandler} className={styles.formContainer}>
+      <h2 className={styles.formTitle}>Регистрация</h2>
       <input
         type='text'
         name='username'
@@ -57,6 +60,7 @@ export default function SignUpForm() {
         autoFocus
         onChange={onChangeHandler}
         value={username}
+        className={styles.inputField}
       />
 
       <input
@@ -65,6 +69,7 @@ export default function SignUpForm() {
         placeholder='введите ваш email'
         onChange={onChangeHandler}
         value={email}
+        className={styles.inputField}
       />
 
       <input
@@ -73,6 +78,7 @@ export default function SignUpForm() {
         placeholder='введите ваш пароль'
         onChange={onChangeHandler}
         value={password}
+        className={styles.inputField}
       />
 
       <input
@@ -81,9 +87,11 @@ export default function SignUpForm() {
         placeholder='повторите ваш пароль'
         onChange={onChangeHandler}
         value={repeatPassword}
+        className={styles.inputField}
       />
 
-      <button type='submit'>регистрация</button>
+      <button type='submit' className={styles.submitButton}>Зарегистрироваться</button>
     </form>
+    </div>
   );
 }

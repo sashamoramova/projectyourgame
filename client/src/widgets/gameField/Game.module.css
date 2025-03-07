@@ -34,6 +34,17 @@
   color: #2c3e50; /* Темно-синий текст */
   padding: 10px;
   border: 1px solid #bdc3c7;
+
+.table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+.th,
+.td {
+  border: 1px solid #ddd;
+  padding: 8px;
+
   text-align: center;
   font-size: 1em;
   margin: 5px;
@@ -49,4 +60,8 @@
 .questionsCard:hover {
   background-color: #d4e6f1; /* Немного более светлый фон при наведении */
   cursor: pointer; /* Изменение курсора на руку при наведении */
+
+.th {
+  background-color: #f2f2f2;
+
 }

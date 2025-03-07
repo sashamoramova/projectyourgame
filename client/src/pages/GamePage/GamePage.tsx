@@ -3,3 +3,7 @@ import { JSX } from "react";
 export function GamePage(): JSX.Element {
   return <GameField />;
 }
+
+//путь:     /game
+
+

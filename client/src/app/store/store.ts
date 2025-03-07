@@ -1,13 +1,25 @@
-import { questionReducer } from "@/entities/question";
-import { themeReducer } from "@/entities/theme";
-import { userReducer } from "@/entities/user";
-import { configureStore } from "@reduxjs/toolkit";
+
+
+import { questionReducer } from '@/entities/question';
+import { themeReducer } from '@/entities/theme';
+
+import { gameReducer } from '@/entities/game/slice/gameSlice';
+
+import { userReducer } from '@/entities/user';
+import { configureStore } from '@reduxjs/toolkit';
+
 
 const store = configureStore({
   reducer: {
     user: userReducer,
+
+
     theme: themeReducer,
     question: questionReducer,
+
+    game: gameReducer,
+    // task: taskReducer,
+
   },
 });
 

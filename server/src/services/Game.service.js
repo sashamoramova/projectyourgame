@@ -29,7 +29,9 @@ class GameService {
 
   //* Создать новую игру
   static async create(data) {
-    return await Game.create(data);
+    const newGame = await Game.create(data);
+    return await this.getById(newGame.id);
+    // return await Game.create(data);
   }
 
   //* Обновить игру по ID

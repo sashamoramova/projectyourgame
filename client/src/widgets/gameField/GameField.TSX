@@ -9,6 +9,7 @@ import {
 } from "@/entities/question";
 import QuestionCard from "@/entities/question/ui/QuestionCard/QuestionCard";
 
+
 export function GameField() {
   const [themes, setThemes] = useState<ThemeArrayType | null>(null);
   const [questions, setQuestions] = useState<QuestionArrayType | null>(null);
