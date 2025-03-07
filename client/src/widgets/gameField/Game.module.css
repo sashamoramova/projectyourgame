@@ -33,7 +33,7 @@
   background-color: #ecf0f1; /* Светло-серый фон */
   color: #2c3e50; /* Темно-синий текст */
   padding: 10px;
-  border: 1px solid #bdc3c7;
+  border: 1px solid #bdc3c7;}
 
 .table {
   width: 80%;
@@ -60,6 +60,7 @@
 .questionsCard:hover {
   background-color: #d4e6f1; /* Немного более светлый фон при наведении */
   cursor: pointer; /* Изменение курсора на руку при наведении */
+}
 
 .th {
   background-color: #f2f2f2;
