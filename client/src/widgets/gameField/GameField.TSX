@@ -61,7 +61,7 @@ export function GameField() {
     <>
       <div>Очков набрано:{counter}</div>
       <div className={styles.field}>
-        {themes.map((theme) => (
+        {themes?.map((theme) => (
           <div className={styles.column} key={theme.id}>
             <div className={styles.row}>
               <div className={styles.themeCard}>{theme.themeName}</div>
