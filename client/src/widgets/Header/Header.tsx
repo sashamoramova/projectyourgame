@@ -29,12 +29,12 @@ export default function Header(): JSX.Element {
       </NavLink>
       {user && (
         <>
-          {/* <NavLink
-            to={CLIENT_ROUTES.TASKS}
+          <NavLink
+            to={CLIENT_ROUTES.SCORE}
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
-            Задачи
-          </NavLink> */}
+            Счёт
+          </NavLink>
           <UserAvatar user={user} />
           <button onClick={onSignOutHandler}>Выйти</button>
         </>
