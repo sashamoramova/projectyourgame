@@ -5,5 +5,4 @@ export function ScorePage(): JSX.Element {
 }
 
 
-
 //путь:     /scores
