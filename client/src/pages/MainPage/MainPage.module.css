@@ -1,0 +1,30 @@
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.btnStart {
+  padding: 25px 50px;
+  font-size: 42px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #15467a);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btnStart:hover {
+  background: linear-gradient(135deg, #0056b3, #0a2e5d);
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btnStart:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
