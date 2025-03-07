@@ -11,6 +11,7 @@ class GameController {
     try {
       const games = await GameService.getAll();
 
+      // console
       if (games.length === 0) {
         return res.status(200).json(formatResponse(200, 'No games found', []));
       }

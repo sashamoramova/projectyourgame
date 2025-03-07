@@ -4,6 +4,5 @@ export function GamePage(): JSX.Element {
 }
 
 
-
 //путь:     /game
 

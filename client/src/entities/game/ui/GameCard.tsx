@@ -7,10 +7,11 @@ interface GameCardProps {
 
 export function GameCard({ game }: GameCardProps) {
 
-  // console.log(task);
+  console.log(game);
   return (
     <div className={styles.oneElement}>
-      <div className={styles.username}>{game.User.username}</div>
+      <div className={styles.username}>{game.user.username}</div>
+      {/* <div className={styles.username}>{game.userId}</div> */}
       <div className={styles.score}>{game.score}</div>
     </div>
   );

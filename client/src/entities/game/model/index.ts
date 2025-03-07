@@ -9,7 +9,7 @@ export interface IGame extends IRawGameData {
   userId: number;
   createdAt: Date;
   updatedAt: Date;
-  User: IUser;
+  user: IUser;
 }
 
 export type ArrayGamesType = Array<IGame>;
