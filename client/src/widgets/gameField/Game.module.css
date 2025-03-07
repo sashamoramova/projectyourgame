@@ -1,19 +1,14 @@
 .field {
   display: flex;
-  flex-direction: column; /* Расположение колонок друг под другом */
+  flex-direction: column; /* Расположение строк друг под другом */
   width: 80%; /* Занимает 80% ширины родителя */
   margin: 0 auto; /* Центрирование по горизонтали */
 }
 
-.column {
+.themeRow {
   display: flex;
-  flex-direction: row; /* Расположение карточек в строке */
-  flex: 1; /* Занимает все доступное пространство по ширине */
-}
-
-.row {
-  display: flex;
-  flex: 1;
+  align-items: center; /* Выравнивание темы и вопросов по вертикали */
+  margin-bottom: 10px; /* Отступ между строками */
 }
 
 .themeCard {
@@ -25,44 +20,27 @@
   font-size: 1.2em;
   font-weight: bold;
   border-radius: 5px;
-  margin: 5px;
-  flex: 1; /* Занимает все доступное пространство по высоте */
+  margin-right: 10px; /* Отступ между темой и вопросами */
+  min-width: 150px; /* Фиксированная ширина для темы */
+}
+
+.questionsRow {
+  display: flex;
+  gap: 10px; /* Отступ между вопросами */
 }
 
 .questionsCard {
   background-color: #ecf0f1; /* Светло-серый фон */
   color: #2c3e50; /* Темно-синий текст */
   padding: 10px;
-  border: 1px solid #bdc3c7;}
-
-.table {
-  width: 80%;
-  border-collapse: collapse;
-  margin: 20px auto;
-}
-.th,
-.td {
-  border: 1px solid #ddd;
-  padding: 8px;
-
+  border: 1px solid #bdc3c7;
   text-align: center;
   font-size: 1em;
-  margin: 5px;
-  flex: 1; /* Одинаковая высота для всех карточек с вопросами */
-  height: 100px; /* Фиксированная высота, чтобы все карточки были одинакового размера */
-  display: flex;
-  align-items: center; /* Выравнивание текста по вертикали */
-  justify-content: center; /* Выравнивание текста по горизонтали */
   border-radius: 5px;
+  min-width: 80px; /* Фиксированная ширина для вопроса */
+  cursor: pointer; /* Курсор в виде руки при наведении */
 }
 
-/* Дополнительные стили для красоты */
 .questionsCard:hover {
-  background-color: #d4e6f1; /* Немного более светлый фон при наведении */
-  cursor: pointer; /* Изменение курсора на руку при наведении */
-}
-
-.th {
-  background-color: #f2f2f2;
-
+  background-color: #d4e6f1; /* Немного более сетлый фон при наведении */
 }
