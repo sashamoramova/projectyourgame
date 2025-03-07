@@ -54,6 +54,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  background-color: blue;
 }
 
 .editBtn:hover {
@@ -77,7 +78,7 @@
 .form {
   margin: 10px;
   padding: 16px;
-  background-color: #fff;
+  /* background-color: #fff; */
   transition: box-shadow 0.3s ease;
 
   display: flex;

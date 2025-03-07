@@ -1,14 +1,26 @@
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .field {
   display: flex;
   flex-direction: column; /* Расположение строк друг под другом */
   width: 80%; /* Занимает 80% ширины родителя */
-  margin: 0 auto; /* Центрирование по горизонтали */
+}
+
+.score {
+  margin: 10px;
+  text-align: center;
 }
 
 .themeRow {
   display: flex;
   align-items: center; /* Выравнивание темы и вопросов по вертикали */
   margin-bottom: 10px; /* Отступ между строками */
+  
 }
 
 .themeCard {

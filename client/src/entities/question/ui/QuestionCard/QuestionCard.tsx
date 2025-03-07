@@ -50,7 +50,7 @@ export default function QuestionCard({
             type="text"
             value={input}
             onChange={handleChange}
-            placeholder="Title"
+            placeholder="введи ответ... с маленькой буквы..."
             name="title"
           />
           <button className={styles.editBtn} type="submit">

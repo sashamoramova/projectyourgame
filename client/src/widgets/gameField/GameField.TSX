@@ -75,7 +75,7 @@ export function GameField() {
 
   return (
     <>
-      <div>Очков набрано:{counter}</div>
+      <div className={styles.score}>Очков набрано:{counter}</div>
       <div className={styles.main}>
       <div className={styles.field}>
         {themes?.map((theme) => (
