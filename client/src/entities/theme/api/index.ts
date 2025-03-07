@@ -31,6 +31,7 @@ export const getAllThemesThunk = createAsyncThunk<
 });
 
 export const getThemeByIdThunk = createAsyncThunk<
+
   IServerResponse,
   number,
   { rejectValue: IServerResponse }
