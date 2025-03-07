@@ -16,7 +16,7 @@ export function GameField() {
   const [counter, setCounter] = useState(0);
   const [selectedQ, setSelectedQ] = useState<IQuestion | null>(null);
   const [renderCard, setRenderCard] = useState(false);
-  const [arrOfQuestions, setArrOfQuestions] = useState([]);
+  // const [arrOfQuestions, setArrOfQuestions] = useState([]);
 
   const dispatch = useAppDispatch();
 

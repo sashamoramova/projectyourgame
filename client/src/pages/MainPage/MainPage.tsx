@@ -10,7 +10,7 @@ export function MainPage(): JSX.Element {
   const user = useAppSelector((state) => state.user.user);
 
 
-  // const startNewgame = 
+  // const startNewGame = async 
   
   return (
     <div className={styles.btnContainer}>
