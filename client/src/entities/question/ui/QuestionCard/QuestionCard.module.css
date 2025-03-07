@@ -1,0 +1,119 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.body {
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.author {
+  font-style: italic;
+  color: #666;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.editBtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editBtn:hover {
+  background-color: #3e8e41;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteBtn:hover {
+  background-color: #da190b;
+}
+
+.form {
+  margin: 10px;
+  padding: 16px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  outline: none; /* Убирает стандартную обводку при фокусе */
+  border-color: #4caf50; /* Подсвечивает рамку при фокусе */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Добавляет тень при фокусе */
+}
+
+.editCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.backBtn {
+  align-self: flex-end;
+  background-color: #f44336;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.backBtn:hover {
+  background-color: #da190b;
+}
