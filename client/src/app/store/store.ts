@@ -1,10 +1,14 @@
+import { questionReducer } from '@/entities/question';
+import { themeReducer } from '@/entities/theme';
 import { userReducer } from '@/entities/user';
 import { configureStore } from '@reduxjs/toolkit';
 
 const store = configureStore({
   reducer: {
     user: userReducer,
-    // task: taskReducer,
+   
+    theme: themeReducer,
+    question: questionReducer,
   },
 });
 

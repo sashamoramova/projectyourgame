@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
-import styles from "./Game.module.css";
+// import styles from "./Game.module.css";
+import styles from './Game.module.css'
+import { useAppDispatch } from "@/shared/hooks/reduxHooks";
 
 export function GameField() {
   const dispatch = useAppDispatch();
