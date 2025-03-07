@@ -59,7 +59,9 @@ body {
   }
 
   &:hover {
-    color: #667bc6;
+    color: #0557a9;
     border-radius: 30px;
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
   }
 }
