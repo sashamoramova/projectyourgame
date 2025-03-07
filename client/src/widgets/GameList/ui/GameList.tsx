@@ -15,7 +15,8 @@ export function GameList(): JSX.Element {
   return (
     <div className={styles.bobr} >
       {/* <div>Сыграно {totalGames}</div> */}
-      <div>Лучшие бобрята</div>
+      <h2>Лучшие бобрята</h2>
+      <div>
       {games.length > 0 ? (
         games.map((el) => (
           <GameCard
@@ -27,6 +28,7 @@ export function GameList(): JSX.Element {
       ) : (
         <h1>Игр пока не обнаружено</h1>
       )}
+      </div>
     </div>
   );
 }
