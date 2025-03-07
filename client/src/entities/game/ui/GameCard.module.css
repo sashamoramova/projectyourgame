@@ -1,0 +1,31 @@
+/* .oneElement{
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    
+}
+
+.score {
+    
+} */
+
+
+
+.oneElement {
+    display: flex; /* Включаем Flexbox */
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    align-items: center; /* Выравнивание элементов по центру по вертикали */
+    width: 100%; /* Ширина контейнера */
+    max-width: 600px; /* Максимальная ширина (можно настроить под ваши нужды) */
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
+    padding: 10px; /* Отступы внутри контейнера */
+    border: 1px solid #ccc; /* Граница для наглядности (можно убрать) */
+  }
+  
+  .username,
+  .score {
+    flex: 1; /* Элементы занимают равное пространство */
+    text-align: center; /* Текст по центру внутри каждого элемента */
+  }

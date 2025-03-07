@@ -1,0 +1,1 @@
+export { memorizedGameList as GameList } from './ui/GameList';
