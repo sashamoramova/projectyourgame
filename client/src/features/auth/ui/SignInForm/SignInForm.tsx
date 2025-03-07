@@ -4,6 +4,7 @@ import UserValidator from '../../validation/UserValidator';
 import { IUserSignInData, signInThunk } from '@/entities/user';
 import { CLIENT_ROUTES } from '@/shared/enums/clientRoutes';
 import { useAppDispatch, useAppSelector } from '@/shared/hooks/reduxHooks';
+import styles from './SignInForm.module.css'
 // import { useAlert } from '@/features/alerts';
 
 const INITIAL_INPUTS_DATA = {
@@ -45,13 +46,16 @@ export default function SignInForm() {
   const { email, password } = inputs;
 
   return (
-    <form onSubmit={onSubmitHandler}>
+    <div className={styles.formWrapper}>
+    <form onSubmit={onSubmitHandler} className={styles.formContainer}>
+      <h2 className={styles.formTitle}>Вход</h2>
       <input
         type='email'
         name='email'
         placeholder='введите ваш email'
         onChange={onChangeHandler}
         value={email}
+        className={styles.inputField}
       />
 
       <input
@@ -60,10 +64,12 @@ export default function SignInForm() {
         placeholder='введите ваш пароль'
         onChange={onChangeHandler}
         value={password}
+        className={styles.inputField}
       />
-      <button type='submit' disabled={isLoading}>
+      <button type='submit' className={styles.submitButton} disabled={isLoading}>
         {isLoading ? 'Загрузка...' : 'войти'}
       </button>
     </form>
+    </div>
   );
 }
