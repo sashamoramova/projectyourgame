@@ -60,6 +60,7 @@ export function GameField() {
   return (
     <>
       <div>Очков набрано:{counter}</div>
+      <div className={styles.main}>
       <div className={styles.field}>
         {themes?.map((theme) => (
           <div className={styles.column} key={theme.id}>
@@ -78,6 +79,7 @@ export function GameField() {
           </div>
         ))}
       </div>
+      <div>
       {renderCard && (
         <QuestionCard
           selectedQ={selectedQ}
@@ -86,6 +88,8 @@ export function GameField() {
           setRenderCard={setRenderCard}
         />
       )}
+      </div>
+      </div>
     </>
   );
 }

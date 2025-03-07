@@ -30,10 +30,14 @@
 }
 
 .questionsCard {
+  width: 100px;
   background-color: #ecf0f1; /* Светло-серый фон */
   color: #2c3e50; /* Темно-синий текст */
   padding: 10px;
-  border: 1px solid #bdc3c7;}
+  border: 1px solid #bdc3c7;
+  border-radius: 15px;
+  text-align: center;
+}
 
 .table {
   width: 80%;
@@ -65,4 +69,14 @@
 .th {
   background-color: #f2f2f2;
 
+}
+
+
+
+.main {
+  max-width: 60%;
+  margin: 0 auto;
+  /* text-align: center; */
+  /* padding: 20px; */
+  /* border-radius: 8px; */
 }
