@@ -1,5 +1,6 @@
 import styles from './GameList.module.css';
-import React, { JSX, useMemo } from "react";
+import React, { JSX } from "react";
+// import { useMemo } from "react";
 import { GameCard } from "@/entities/game";
 import { useGameList } from "../useGameList";
 
